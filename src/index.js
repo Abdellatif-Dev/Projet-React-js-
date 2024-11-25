@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 //import App from './App';
 import {Appp} from './Controle2v1/Appp';
-import reportWebVitals from './reportWebVitals';
 import {Afficher} from './links/affichage'
 //import {Afficher} from './ordinateur/affichager'
 import {Aficher} from './controle/Aficher'
@@ -43,7 +42,4 @@ root.render(
 /* <><Provider store={lis}><Cher/></Provider></> */
 <><APPApi/></>
 )
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
