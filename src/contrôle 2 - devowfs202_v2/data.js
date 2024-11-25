@@ -1,0 +1,21 @@
+export const list_circuits = [
+    { code: 111,
+    depart: "Azrou",
+    arrivee: "Oued ifrane",
+    niveau: "Facile",
+    likes: 22,
+    },
+    { code: 222,
+    depart: "Ain Louh",
+    arrivee: "Ain Smim",
+    niveau: "Difficile",
+    likes: 30,
+    },
+    { code: 333,
+    depart: "Ain Smim",
+    arrivee: "Azrou",
+    niveau: "Moyen",
+    likes: 20,
+    },
+    ];
+export  const endroits = ["Azrou", "Ain Ifrane", "Ain Louh", "Oum rabii", "Ain Smim"]
