@@ -36,10 +36,11 @@ import Cher from './chercherbar/cher';
 import { lis } from './chercherbar/store';
 import AppVoitures from './ISTA-ALADARISSA-EFM/AppVoitures';
 import APPApi from './ApiEX/APPApi';
+import ProductList from './StoreProductsMiniProject/ProductList';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
 /*  <BrowserRouter> <AppGestionHotelP2/></BrowserRouter>  */
 /* <><Provider store={lis}><Cher/></Provider></> */
-<><APPApi/></>
+<><ProductList/></>
 )
 
