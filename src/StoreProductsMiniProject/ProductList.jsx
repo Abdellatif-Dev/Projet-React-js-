@@ -2,24 +2,15 @@ import React, { useEffect, useState } from "react";
 import Product from "./Product";
 
 export default function ProductList() {
-  const [InpSearch, setInpSearch] = useState(""); // Search input state
-  const [products, setProducts] = useState([]); // All products
-  const [categories, setCategories] = useState([]); // Product categories
-  const [selectCategories, setSelectCategories] = useState(""); // Selected category
+  const [InpSearch, setInpSearch] = useState(""); 
+  const [btnSearch, setbtnSearch] = useState(""); 
+  const [products, setProducts] = useState([]); 
+  const [categories, setCategories] = useState([]);
+  const [selectCategories, setSelectCategories] = useState(""); 
 
-  // Function to render category buttons
   const BtnCategories = () => {
     return (
       <>
-        {/* Show All Button */}
-        <button
-          className={
-            "btn " + (selectCategories === "" ? "btn-dark" : "btn-secondary")
-          }
-          onClick={() => setSelectCategories("")}
-        >
-          Show All
-        </button>
         {categories.map((category, index) => (
           <button
             key={index}
@@ -36,40 +27,31 @@ export default function ProductList() {
     );
   };
 
-  // Filter products based on search input and category
   const filteredProducts = () => {
     let filtered = products;
-
-    // Filter by category
     if (selectCategories) {
       filtered = filtered.filter((p) => p.category === selectCategories);
     }
-
-    // Filter by search input
-    if (InpSearch) {
+    if (btnSearch) {
       filtered = filtered.filter(
         (p) =>
-          p.title.toLowerCase().includes(InpSearch.toLowerCase()) ||
-          p.description.toLowerCase().includes(InpSearch.toLowerCase())
+          p.title.toLowerCase().includes(btnSearch.toLowerCase()) ||
+          p.description.toLowerCase().includes(btnSearch.toLowerCase())
       );
     }
 
     return filtered;
   };
 
-  // Reset both filters
   const resetFilters = () => {
     setInpSearch("");
-    setSelectCategories("");
+    setbtnSearch("");
   };
 
   useEffect(() => {
-    // Fetch products
     fetch("https://fakestoreapi.com/products/")
       .then((response) => response.json())
       .then((data) => setProducts(data));
-
-    // Fetch categories
     fetch("https://fakestoreapi.com/products/categories")
       .then((response) => response.json())
       .then((data) => setCategories(data));
@@ -77,24 +59,24 @@ export default function ProductList() {
 
   return (
     <div className="container">
-      {/* Search */}
+    
+      
       <h5>Search:</h5>
+      <div className="input-group mb-3">
       <input
         type="text"
         value={InpSearch}
+        className="form-control"
         onChange={(e) => setInpSearch(e.target.value)}
         placeholder="Search by title or description"
-      />
-      <button onClick={() => setInpSearch("")}>Clear Search</button>
-      <button onClick={resetFilters}>Reset Filters</button>
-
-      {/* Categories */}
+        />
+      <button className="btn btn-dark" onClick={() => setbtnSearch(InpSearch)}>Search</button>
+      <button className="btn btn-dark" onClick={resetFilters}>Reset Filters</button>
+        </div>
       <h5>Categories:</h5>
       <div className="row g-3 align-items-center">
         <div className="btn-group">{BtnCategories()}</div>
       </div>
-
-      {/* Products */}
       <h5>Products:</h5>
       <table className="table table-borderless">
         <thead>
