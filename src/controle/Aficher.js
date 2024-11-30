@@ -7,7 +7,7 @@ import {Medecin} from './Medecin.js'
 export function Aficher(){
     return <>
     <Titre titre={'les medecins le plus consolter'}/>
-    <ListBox tabe={specialites}/>
+    <ListBox tab={specialites}/>
     <Medecin tab={medecins}/>
     </>
 }
