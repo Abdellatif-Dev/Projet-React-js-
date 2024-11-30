@@ -12,7 +12,7 @@ export default function FormRecherche(props) {
                 onChange={(e)=>setEquipe(e.target.value)}
                 className="form-control"
             />
-            <button onClick={()=>props.Searsh(equipe)} className='btn btn-outline-success'> Search</button>
+            <button onClick={()=>props.Searsh(equipe)} className='btn btn-outline-success'> Search </button>
             </div>
         </div>
     )
