@@ -42,7 +42,7 @@ import AppApiControle2 from './contrôle2_v3Api/AppApiControle2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
-/*  <BrowserRouter> <AppGestionHotelP2/></BrowserRouter>  */
+
 /* <><Provider store={lis}><Cher/></Provider></> */
 <BrowserRouter><AppApiControle2/></BrowserRouter>
 )
