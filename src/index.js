@@ -39,11 +39,12 @@ import APPApi from './ApiEX/APPApi';
 import ProductList from './StoreProductsMiniProject/ProductList';
 import APPTest from './TESTAPI/APPTest';
 import AppApiControle2 from './contrôle2_v3Api/AppApiControle2';
+import AppStagiaires from './EFMRegionaleFrontEnd/AppStagiaires';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
-
+<AppStagiaires/>
 /* <><Provider store={lis}><Cher/></Provider></> */
-<BrowserRouter><AppApiControle2/></BrowserRouter>
+//<BrowserRouter><AppApiControle2/></BrowserRouter>
 )
 
