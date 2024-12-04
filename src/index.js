@@ -40,11 +40,14 @@ import ProductList from './StoreProductsMiniProject/ProductList';
 import APPTest from './TESTAPI/APPTest';
 import AppApiControle2 from './contrôle2_v3Api/AppApiControle2';
 import AppStagiaires from './EFMRegionaleFrontEnd/AppStagiaires';
+import store from './EFMRegionaleFrontEnd/redux/store';
+import AppRedux from './EFMRegionaleFrontEnd/redux/AppRedux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
-<AppStagiaires/>
+//<AppStagiaires/>
 /* <><Provider store={lis}><Cher/></Provider></> */
 //<BrowserRouter><AppApiControle2/></BrowserRouter>
+<Provider store={store}><AppRedux/></Provider>
 )
 
