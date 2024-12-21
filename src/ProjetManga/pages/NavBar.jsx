@@ -4,6 +4,7 @@ import Recherche from './Recherche'
 export default function NavBar() {
   return (
     <nav className="bg-black text-white">
+      <div className=" container">
       <div className=" mx-auto flex  items-center justify-between p-1">
         
         <div className="flex items-center space-x-4">
@@ -28,6 +29,7 @@ export default function NavBar() {
           </button>
 
         </div>
+      </div>
       </div>
     </nav>
   );

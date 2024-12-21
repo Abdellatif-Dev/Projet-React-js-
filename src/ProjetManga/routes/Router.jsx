@@ -5,6 +5,7 @@ import NotFound from "../pages/NotFound";
 import Login from "../pages/Login";
 import Series from "../pages/Series";
 import Affichage from "../pages/Affichage";
+import Anime from "../pages/Anime";
 
 export const route=createBrowserRouter([
     {
@@ -22,6 +23,15 @@ export const route=createBrowserRouter([
                 path: "/series/:T/:N",
                 element: <Affichage/>,
             },
+            {
+                path: "/series/:T",
+                element: <Anime/>,
+            },
+            {
+                path: "/series/:T/page/:P",
+                element: <Anime/>,
+            },
+            
             {
                 path: "/login",
                 element: <Login/>,
