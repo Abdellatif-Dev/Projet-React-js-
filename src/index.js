@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
 //import App from './App';
 import {Appp} from './Controle2v1/Appp';
 import {Afficher} from './links/affichage'
@@ -42,12 +43,14 @@ import AppApiControle2 from './contrôle2_v3Api/AppApiControle2';
 import AppStagiaires from './EFMRegionaleFrontEnd/AppStagiaires';
 import store from './EFMRegionaleFrontEnd/redux/store';
 import AppRedux from './EFMRegionaleFrontEnd/redux/AppRedux';
+import InfoProd from './ExamenFinModuleRegional/InfoProd';
+import AppManga from './ProjetManga/AppManga';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
-//<AppStagiaires/>
+<AppManga/>
 /* <><Provider store={lis}><Cher/></Provider></> */
 //<BrowserRouter><AppApiControle2/></BrowserRouter>
-<Provider store={store}><AppRedux/></Provider>
+//<Provider store={store}><AppRedux/></Provider>
 )
 
