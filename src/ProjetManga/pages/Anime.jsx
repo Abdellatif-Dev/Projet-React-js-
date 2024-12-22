@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { anime } from "./data";
 import { Link, useParams } from "react-router-dom";
 import { GoChevronLeft ,GoChevronRight } from "react-icons/go";
@@ -16,7 +16,7 @@ export default function Anime() {
   console.log(P);
 
   return (
-    <div className="bg-zinc-950 pt-8">
+    <div className="bg-zinc-950 pt-20">
       <div className="container grid grid-cols-11 gap-3 ">
         <div className="col-span-8">
           <div className=" border-2 rounded-md border-red-700 bg-zinc-800 ">

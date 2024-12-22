@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Series() {
 
   return (
-    <div className='bg-zinc-950 pt-8'>
+    <div className='bg-zinc-950 pt-20'>
       <div className="container grid xl:grid-cols-5 gap-2 lg:grid-cols-4 md:grid-cols-3 ms:grid-cols-2 ">
         {anime.map((a,i)=>(
           <div key={i} className="bg-zinc-800 rounded-md p-2 ">
